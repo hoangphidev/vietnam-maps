@@ -1,16 +1,32 @@
 {
     "name": "hoangphi/vietnam-maps",
-    "description": "Package about Vietnam area",
+    "description": "Vietnam's area database.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "hoangphidev",
+        "vietnam-maps",
+        "vietnam-zone",
+        "vietnam-database",
+        "laravel",
+        "laravel-package",
+        "laravel-package-vietnam",
+        "laravel-vietnam-maps",
+        "hanhchinhvietnam",
+        "hcvn"
+    ],
+    "homepage": "https://github.com/hoangphidev/vietnam-maps",
     "authors": [
         {
             "name": "Phi Hoang",
-            "email": "hoangphi.dev@gmail.com"
+            "email": "hoangphi.dev@gmail.com",
+            "homepage": "https://github.com/hoangphidev/vietnam-maps",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": "^7.2|^8.0",
         "illuminate/support": "^5.8|^6|^7|^8",
         "illuminate/database": "^5.8|^6|^7|^8",
         "illuminate/console": "^5.8|^6|^7|^8",
@@ -22,11 +38,15 @@
             "HoangPhi\\VietnamMap\\": "src/"
         }
     },
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "HoangPhi\\VietnamMap\\VietnamMapServiceProvider"
             ]
         }
-    }
+    },
+    "prefer-stable": true
 }
