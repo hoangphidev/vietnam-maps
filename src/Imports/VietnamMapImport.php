@@ -108,7 +108,7 @@ class VietnamMapImport implements WithHeadingRow, SkipsOnFailure, ToArray, WithC
 
         $this->districtMap[$item['ma_qh']] = $districtId;
 
-        return $provinceId;
+        return $districtId;
     }
 
     private function createProvinceMap()
