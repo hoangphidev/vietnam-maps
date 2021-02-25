@@ -40,18 +40,18 @@ class VietnamMapImport implements WithHeadingRow, SkipsOnFailure, ToArray, WithC
     {
         $wardImport = [];
         foreach ($array as $item) {
-            if (empty($item['ma']) || empty($item['ten'])) {
+            if (empty($item['ma_px']) || empty($item['phuong_xa'])) {
                 continue;
             }
 
-            if (isset($this->wardMap[$item['ma']])) {
+            if (isset($this->wardMap[$item['ma_px']])) {
                 continue;
             }
 
             $districtId = $this->getDistrictId($item);
             $wardImport[] = [
-                $this->columnNames['name'] => $item['ten'],
-                $this->columnNames['gso_id'] => $item['ma'],
+                $this->columnNames['name'] => $item['phuong_xa'],
+                $this->columnNames['gso_id'] => $item['ma_px'],
                 $this->columnNames['district_id'] => $districtId,
                 'created_at' => now(),
                 'updated_at' => now(),
